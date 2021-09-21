@@ -1,0 +1,6 @@
+RewriteEngine On
+#Disable Directory Listing
+Options -Indexes
+#Automaticaly add .php extention to files.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
